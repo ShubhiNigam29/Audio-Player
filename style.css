@@ -29,6 +29,7 @@
 .player-container svg {
     position: absolute;
     pointer-events: none;
+    transform: rotate(-90deg);
 }
 
 .time-display {

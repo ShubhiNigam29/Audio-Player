@@ -19,6 +19,14 @@ const app = () => {
     outline.style.strokeDasharray = outlineLength;
     outline.style.strokeDashoffset = outlineLength;
 
+    // Select different songs
+    songs.forEach(song => {
+        song.addEventListener('click', function() {
+            song.src = this.getAttribute('data-song');
+            checkPlaying(song);
+        })
+    })
+
     // Play songs
     play.addEventListener('click', () => {
         checkPlaying(song);
@@ -54,7 +62,7 @@ const app = () => {
 
         // Animate the circle
         let progress = outlineLength - (currentTime / fakeDuration) * outlineLength;
-        outline.style.strokeDasharray = progress;
+        outline.style.strokeDashoffset = progress;
 
         // Animate the time text
         timeDisplay.textContent = `${minutes}:${seconds}`;
