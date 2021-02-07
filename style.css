@@ -1,0 +1,31 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-select, 
+.song-selector, 
+.player-container {
+    height: 80%;
+    flex: 1;
+}
+
+.time-select {
+    background: lightblue;
+}
+
+.song-selector {
+    background: lightgreen;
+}
+
+.player-container {
+    background: lightcoral;
+}
