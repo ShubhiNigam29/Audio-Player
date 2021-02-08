@@ -6,7 +6,7 @@ Music Player is designed using Vanilla JS, HTML, and CSS. It is re-usable and ac
 
 Music is the strongest form of Magic! <br />
 
-![alt text]()
+![alt text](https://github.com/ShubhiNigam29/Music-Player/blob/main/music.jpg)
 
 
 This app is designed to let the users listen to music as per their mood. <br />
