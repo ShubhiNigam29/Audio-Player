@@ -20,10 +20,11 @@ const app = () => {
     outline.style.strokeDashoffset = outlineLength;
 
     // Select different songs
-    songs.forEach(song => {
-        song.addEventListener('click', function() {
-            song.src = this.getAttribute('data-song');
-            checkPlaying(song);
+    songs.forEach(sng => {
+        sng.addEventListener('click', function() {
+            sng.src = this.getAttribute('data-song');
+            video.src = this.getAttribute("data-video");
+            checkPlaying(sng);
         })
     })
 
