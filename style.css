@@ -84,3 +84,8 @@ video {
     height: 80%;
     width: 80%;
 }
+
+.replay {
+    position: absolute;
+    bottom: 10%;
+}

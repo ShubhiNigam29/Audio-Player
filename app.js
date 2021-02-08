@@ -1,6 +1,7 @@
 const app = () => {
     const song = document.querySelector('.song');
     const play = document.querySelector('.play');
+    const replay = document.querySelector(".replay");
     const outline = document.querySelector('.moving-outline circle');
     const video = document.querySelector('.vid-container video');
 
@@ -26,29 +27,39 @@ const app = () => {
             video.src = this.getAttribute("data-video");
             checkPlaying(sng);
         })
-    })
+    });
 
     // Play songs
     play.addEventListener('click', () => {
         checkPlaying(song);
     });
 
+    // Replay song
+    replay.addEventListener("click", function() {
+        restartSong(song);
+    });
+
+    const restartSong = song => {
+        let currentTime = song.currentTime;
+        song.currentTime = 0;
+    };
+
     // Select duration
     timeSelect.forEach(option => {
         option.addEventListener('click', function() {
             fakeDuration = this.getAttribute('data-time');
             timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)}`;
-        })
-    })
+        });
+    });
 
     // Function to start and stop the song
-    const checkPlaying = song => {
-        if(song.paused) {
-            song.play();
+    const checkPlaying = sng => {
+        if(sng.paused) {
+            sng.play();
             video.play();
             play.src = './svg/pause.svg';
         } else {
-            song.pause();
+            sng.pause();
             video.pause();
             play.src = './svg/play.svg';
         }
@@ -74,7 +85,7 @@ const app = () => {
             play.src = './svg/play.svg';
             video.pause();
         }
-    }
+    };
 }
 
 app();
