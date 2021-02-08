@@ -2,6 +2,10 @@
 
 Music Player is designed using Vanilla JS, HTML, and CSS. It is re-usable and accessible by any device.
 
+# Live Demo
+
+[Music's this way!](https://shubhinigam29.github.io/Music-Player/)
+
 # Functioning
 
 Music is the strongest form of Magic! <br />
