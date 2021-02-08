@@ -6,7 +6,7 @@ const app = () => {
     const video = document.querySelector('.vid-container video');
 
     // Songs
-    const songs = document.querySelectorAll('.song-selector button');
+    const sounds = document.querySelectorAll('.song-selector button');
 
     // Time display
     const timeDisplay = document.querySelector('.time-display');
@@ -21,11 +21,11 @@ const app = () => {
     outline.style.strokeDashoffset = outlineLength;
 
     // Select different songs
-    songs.forEach(sng => {
-        sng.addEventListener('click', function() {
-            sng.src = this.getAttribute('data-song');
+    sounds.forEach(sound => {
+        sound.addEventListener('click', function() {
+            song.src = this.getAttribute('data-song');
             video.src = this.getAttribute("data-video");
-            checkPlaying(sng);
+            checkPlaying(song);
         })
     });
 

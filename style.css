@@ -88,4 +88,5 @@ video {
 .replay {
     position: absolute;
     bottom: 10%;
+    background: white;
 }
